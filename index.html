@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Rael García Ávila</title>
+  <style>
+    @font-face {
+      font-family: 'Jersey10';
+      src: url('Jersey10-Regular-Dg7L8Xa3.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100vh;
+      padding: 0 5%;
+    }
+
+    #text {
+      font-size: 4rem;
+      white-space: pre-wrap;
+      max-width: 60%;
+      font-family: 'Jersey10', Arial, sans-serif;
+    }
+
+    #profile-pic {
+      max-width: 35%;
+      display: none;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    section {
+      padding: 60px 5%;
+      margin: 0 10px;
+      max-width: 100vw;
+      background: linear-gradient(135deg, #121212, #1e1e1e);
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(249, 168, 212, 0.3);
+      color: #eee;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 40px rgba(249, 168, 212, 0.7);
+    }
+
+    section h2 {
+      color: #f9a8d4;
+      /* rosa suave */
+      font-family: 'Jersey10', Arial, sans-serif;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 0 0 8px #fcd34d;
+      letter-spacing: 1.2px;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #ddd;
+      text-align: center;
+    }
+
+    form input,
+    form textarea,
+    form button {
+      display: block;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto 20px auto;
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+      transition: box-shadow 0.3s ease;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      outline: none;
+      box-shadow: 0 0 10px #f9a8d4;
+      background-color: #222;
+      color: white;
+    }
+
+    form button {
+      background: linear-gradient(90deg, #f9a8d4, #fcd34d);
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      color: black;
+      transition: background 0.4s ease;
+    }
+
+    form button:hover {
+      background: linear-gradient(90deg, #fcd34d, #f9a8d4);
+    }
+
+    /* Sección habilidades técnicas */
+    #habilidades {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding-top: 30px;
+    }
+
+    #habilidades img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 5px #f9a8d4);
+      transition: transform 0.3s ease, filter 0.3s ease;
+      cursor: default;
+    }
+
+    #habilidades img:hover {
+      transform: scale(1.2);
+      filter: drop-shadow(0 0 12px #fcd34d);
+    }
+
+    .cohete {
+      display: inline-block;
+      transition: transform 1s ease-in;
+      font-size: 1.5em;
+      opacity: 1;
+    }
+
+    .cohete.animar {
+      animation: despegar 5s linear forwards;
+    }
+
+    @keyframes despegar {
+      0% {
+        transform: scale(1) translate(0, 0) rotate(0deg);
+        opacity: 1;
+      }
+
+      20% {
+        transform: scale(1.3) translate(20px, -30px) rotate(10deg);
+        opacity: 1;
+      }
+
+      40% {
+        transform: scale(1.6) translate(60px, -100px) rotate(25deg);
+        opacity: 0.95;
+      }
+
+      60% {
+        transform: scale(2) translate(120px, -250px) rotate(45deg);
+        opacity: 0.8;
+      }
+
+      80% {
+        transform: scale(2.5) translate(180px, -400px) rotate(70deg);
+        opacity: 0.5;
+      }
+
+      100% {
+        transform: scale(3) translate(250px, -600px) rotate(90deg);
+        opacity: 0;
+      }
+    }
+    #mensaje-exito{
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="text"></div>
+    <img id="profile-pic" src="tu-foto.jpg" alt="Rafael García Ávila" />
+  </div>
+
+  <section id="sobre-mi" class="seccion">
+    <div class="contenido">
+      <h2 class="titulo-seccion"> Sobre mí</h2>
+      <p class="bio">
+        Vi el mundo por primera vez un 20 de diciembre de 2001 en Córdoba, España. Hoy tengo 23 años, y la informática
+        ha estado presente en mi vida desde que tengo memoria.
+      </p>
+      <p class="bio">
+        Siempre me fascinó el funcionamiento interno de los dispositivos que teníamos en casa. Desde desmontar
+        ordenadores y móviles por curiosidad hasta abrir los puertos del router para montar mis propios servidores de
+        videojuegos, todo era parte del juego… o más bien, del comienzo de una pasión.
+      </p>
+      <p class="bio">
+        Aunque inicialmente decidí estudiar Gestión Administrativa y posteriormente Administración y Finanzas, algo
+        dentro de mí seguía vibrando cada vez que tocaba un teclado. Fue en una charla con amigos cuando conecté los
+        puntos: lo que de verdad me apasionaba era aquello que llevaba explorando desde niño —la informática.
+      </p>
+      <p class="bio">
+        Antes de empezar mis estudios actuales, ya me había construido un pequeño portafolio para organizar mis trabajos
+        de administración. El proceso me gustó tanto que decidí dar el paso definitivo e inscribirme en la FP de
+        Desarrollo de Aplicaciones Web.
+      </p>
+      <p class="bio">
+        Sigo en constante aprendizaje, complementando mi formación con cursos en plataformas como OpenWebinars, Udemy,
+        Desafío Latam y Cisco, porque en este mundo tecnológico siempre hay algo nuevo que aprender.
+      </p>
+      <p class="bio">
+        Hoy camino con decisión hacia un futuro donde pueda unir creatividad, tecnología y pasión para construir
+        soluciones web que realmente marquen la diferencia.
+      </p>
+      <p class="bio">
+        ¿Lo mejor de todo? Esto no ha hecho más que empezar.
+        <span class="cohete">🚀</span>
+      </p>
+    </div>
+  </section>
+
+  <section id="habilidades" style="padding: 80px 5%; background-color: #1f2937; color: white;">
+    <h2>Habilidades Técnicas</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: center;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
+        style="width: 80px; height: 80px;" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
+        style="width: 80px; height: 80px;" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"
+        style="width: 80px; height: 80px;" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
+        style="width: 80px; height: 80px;" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
+        style="width: 80px; height: 80px;" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"
+        style="width: 80px; height: 80px;" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+        style="width: 80px; height: 80px;" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"
+        style="width: 80px; height: 80px;" />
+    </div>
+  </section>
+
+  <section id="contacto" class="seccion">
+    <div class="contenido">
+      <h2 class="titulo-seccion">Contacto</h2>
+      <form id="formulario-contacto">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" id="email" placeholder="Correo electrónico" required>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" id="mensaje" rows="4" placeholder="Mensaje" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+
+      <!-- Mensaje de éxito oculto por defecto -->
+    <div id="mensaje-exito" class="alert alert-success mt-3 text-center" style="display: none;">
+      ¡Mensaje enviado con éxito! ✅
+    </div>
+    </div>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const formulario = document.getElementById("formulario-contacto");
+      const mensajeExito = document.getElementById("mensaje-exito");
+
+      formulario.addEventListener("submit", function (e) {
+        e.preventDefault(); // Evita el envío real del formulario
+
+        // Simula envío y muestra el mensaje
+        mensajeExito.style.display = "block";
+
+        // Opcional: limpiar los campos del formulario
+        formulario.reset();
+
+        // Ocultar el mensaje después de unos segundos (por ejemplo, 4s)
+        setTimeout(() => {
+          mensajeExito.style.display = "none";
+        }, 4000);
+      });
+    });
+  </script>
+
+
+  <script>
+    // Aquí tu código de animación de texto como antes
+    const textLines = [
+      "¡Hola!, ¿que tal?\n\n",
+      "Soy Rafael García Ávila \n\n",
+      "y, como puede apreciarse, Desarrollador Web,  \n\n",
+      "¡BIENVENID@!"
+    ];
+
+    const textElement = document.getElementById("text");
+    let lineIndex = 0;
+    let charIndex = 0;
+    let displayedText = "";
+
+    function typeLine() {
+      if (lineIndex >= textLines.length) {
+        showProfileAndConfetti();
+        return;
+      }
+
+      const currentLine = textLines[lineIndex];
+      const isLastLine = (lineIndex === textLines.length - 1);
+
+      if (!isLastLine) {
+        displayedText += currentLine[charIndex] || "";
+        textElement.textContent = displayedText;
+        charIndex++;
+        if (charIndex < currentLine.length) {
+          setTimeout(typeLine, 70);
+        } else {
+          lineIndex++;
+          charIndex = 0;
+          setTimeout(typeLine, 500);
+        }
+      } else {
+        // Para la última línea, escribir con gradiente en un span
+        let partial = currentLine.slice(0, charIndex + 1);
+        textElement.innerHTML = displayedText + `<span class="bienvenido-gradient">${partial}</span>`;
+        charIndex++;
+        if (charIndex < currentLine.length) {
+          setTimeout(typeLine, 70);
+        } else {
+          displayedText += currentLine;
+          lineIndex++;
+          charIndex = 0;
+          setTimeout(typeLine, 500);
+        }
+      }
+    }
+
+    function showProfileAndConfetti() {
+      document.getElementById("profile-pic").style.display = "block";
+      launchConfettiExplosions();
+    }
+
+    function launchConfettiExplosions() {
+      const colors = ["#ff4c4c", "#4cff4c", "#4c4cff", "#ffff4c", "#ff4cff"];
+
+      for (let i = 0; i < 5; i++) {
+        setTimeout(() => {
+          confetti({
+            particleCount: 150,
+            spread: 180,
+            origin: { y: 0.7 },
+            colors: colors,
+            gravity: 0.4,
+            scalar: 0.8,
+            drift: 0
+          });
+        }, i * 400);
+      }
+    }
+
+    typeLine();
+  </script>
+
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+  <style>
+    .bienvenido-gradient {
+      font-weight: 900;
+      font-size: 4rem;
+      background: linear-gradient(90deg, #f9a8d4, #fcd34d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+    }
+  </style>
+  <footer
+    style=" color: #9ca3af; text-align: center; padding: 20px 0; font-size: 0.9rem; font-family: Arial, sans-serif;">
+    © 2025 Rafael García Ávila. Todos los derechos reservados.
+    <div style="margin-top: 15px;">
+      <p>Descarga mi CV escaneando el código QR:</p>
+      <div id="qrcode" style="margin: 0 auto; width: 120px; height: 120px;"></div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    const qrcode = new QRCode(document.getElementById("qrcode"), {
+      text: "https://tusitio.com/cv/RafaelGarciaCV.pdf",
+      width: 120,
+      height: 120,
+      colorDark: "#f9a8d4",  // rosa pastel que usas
+      colorLight: "#000000",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cohete = document.querySelector(".cohete");
+      const seccionSobreMi = document.querySelector("#sobre-mi");
+
+      const observer = new IntersectionObserver(
+        function (entries, observer) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              cohete.classList.add("animar");
+              observer.unobserve(seccionSobreMi); // Solo una vez
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      observer.observe(seccionSobreMi);
+    });
+  </script>
+
+</body>
+
+</html>

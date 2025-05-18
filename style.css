@@ -1,0 +1,145 @@
+/* Fuentes */
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: 'Jersey10', monospace, monospace;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+#intro-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 40px 60px;
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+#typed-text {
+  font-size: 2.5rem;
+  white-space: pre-wrap;
+  max-width: 50%;
+  line-height: 1.4;
+  user-select: none;
+  z-index: 10;
+  color: white;
+}
+
+#profile-img {
+  max-height: 80vh;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #fff;
+  object-fit: contain;
+  max-width: 40%;
+  z-index: 15;
+  display: block;
+}
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 20;
+  display: none;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  background: black;
+  color: white;
+  box-sizing: border-box;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+h2 {
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Tecnologías logos */
+.tech-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tech-logos img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: brightness(1) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.tech-logos img:hover {
+  filter: brightness(1) invert(0);
+}
+
+/* Formulario */
+form {
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 8px 0 16px 0;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+button {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #intro-container {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+  }
+  
+  #typed-text {
+    max-width: 100%;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  #profile-img {
+    max-width: 80%;
+    max-height: 300px;
+  }
+
+  .tech-logos {
+    justify-content: flex-start;
+  }
+}
