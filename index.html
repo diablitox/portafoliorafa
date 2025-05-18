@@ -6,6 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portafolio Rael García Ávila</title>
   <style>
+    @media (max-width: 600px) {
+  /* Ajustar márgenes para que las secciones lleguen casi al borde con un pequeño espacio */
+  section {
+    margin: 10px 8px; /* margen pequeño a los lados */
+    padding: 15px 10px;
+  }
+
+  /* Textos más legibles en móvil */
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Imágenes que no se salgan del ancho */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Si usas flex para alinear elementos horizontalmente, en móvil apílalos */
+  .contenedor-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* espacio entre elementos */
+  }
+
+  /* Botones con tamaño más cómodo en móvil */
+  button {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  /* Opcional: centrar texto en móviles para secciones importantes */
+  section.texto-centrado {
+    text-align: center;
+  }
+}
     @font-face {
       font-family: 'Jersey10';
       src: url('Jersey10-Regular-Dg7L8Xa3.ttf') format('truetype');
